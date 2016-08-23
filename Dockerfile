@@ -8,7 +8,14 @@ ENV LANG=en_US.UTF-8  \
     HOME=/root
 RUN apt-get update && \
     apt-get dist-upgrade -fy && \
-    apt-get install --no-install-recommends -fy bsdmainutils curl vim-nox python-pip && \
+    apt-get install --no-install-recommends -fy \
+        bsdmainutils \
+        curl \
+        vim-nox \
+        w3m \
+        command-not-found \
+        man \
+        python-pip && \
     pip install awscli && \
     apt-get remove -y python-pip && \
     apt-get autoclean -y && \
