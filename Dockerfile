@@ -10,13 +10,15 @@ RUN apt-get update && \
     apt-get dist-upgrade -fy && \
     apt-get install --no-install-recommends -fy \
         bsdmainutils \
+        command-not-found \
         curl \
+        jq \
+        man \
+        python-pip \
+        socat \
         vim-nox \
         w3m \
-        jq \
-        command-not-found \
-        man \
-        python-pip && \
+        && \
     pip install awscli && \
     apt-get remove -y python-pip && \
     apt-get autoclean -y && \
