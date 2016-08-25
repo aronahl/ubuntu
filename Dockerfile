@@ -13,6 +13,7 @@ RUN apt-get update && \
         curl \
         vim-nox \
         w3m \
+        jq \
         command-not-found \
         man \
         python-pip && \
