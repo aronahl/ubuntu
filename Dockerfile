@@ -25,4 +25,5 @@ RUN apt-get update && \
     apt-get clean -y && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/*
+ADD .vimrc /root/
 CMD bash
