@@ -14,6 +14,8 @@ RUN apt-get update && \
         curl \
         jq \
         man \
+        mosh \
+        openssh-client \
         python-pip \
         socat \
         vim-nox \
