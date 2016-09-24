@@ -12,6 +12,7 @@ RUN apt-get update && \
         bsdmainutils \
         command-not-found \
         curl \
+        htop \
         jq \
         man \
         mosh \
