@@ -20,13 +20,14 @@ RUN apt-get update && \
         python-pip \
         socat \
         vim-nox \
-        w3m \
-        && \
+        w3m && \
+    pip install --upgrade pip && \
+    pip install setuptools && \
     pip install awscli && \
-    apt-get remove -y python-pip && \
-    apt-get autoclean -y && \
-    apt-get clean -y && \
-    apt-get autoremove -y && \
-    rm -rf /var/lib/apt/lists/*
+        apt-get remove -y python-pip && \
+        apt-get autoclean -y && \
+        apt-get clean -y && \
+        apt-get autoremove -y && \
+        rm -rf /var/lib/apt/lists/*
 ADD .vimrc /root/
 CMD bash
