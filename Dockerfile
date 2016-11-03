@@ -16,6 +16,7 @@ RUN apt-get update && \
         jq \
         man \
         mosh \
+        netmask \
         openssh-client \
         python-pip \
         socat \
