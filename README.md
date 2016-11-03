@@ -5,6 +5,7 @@ Expand base ubuntu images with tools that I usually need.
   * curl
   * jq
   * man
+  * netmask
   * python-pip
   * socat
   * vim-nox
