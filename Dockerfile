@@ -1,13 +1,14 @@
 FROM ubuntu:16.04
 MAINTAINER https://github.com/aronahl
-RUN locale-gen en_US.UTF-8  
+RUN apt-get update && \
+    apt-get install -fy locales && \
+    locale-gen en_US.UTF-8  
 ENV LANG=en_US.UTF-8  \
     LANGUAGE=en_US:en  \
     LC_ALL=en_US.UTF-8 \
     DEBIAN_FRONTEND=noninteractive \
     HOME=/root
-RUN apt-get update && \
-    apt-get dist-upgrade -fy && \
+RUN apt-get dist-upgrade -fy && \
     apt-get install --no-install-recommends -fy \
         bsdmainutils \
         command-not-found \
