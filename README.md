@@ -1,15 +1,15 @@
 # ubuntu
-<<<<<<< HEAD
-Expand base ubuntu 16.04 image with tools that I usually need.
-=======
-Expand base ubuntu images with tools that I usually need.
->>>>>>> master
+Expand base ubuntu image with tools that I usually need.
   * bsdmainutils
   * command-not-found
   * curl
+  * htop
   * jq
+  * less
   * man
+  * mosh
   * netmask
+  * openssh-client
   * python-pip
   * socat
   * vim-nox
