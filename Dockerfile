@@ -15,6 +15,7 @@ RUN apt-get dist-upgrade -fy && \
         curl \
         htop \
         jq \
+        less \
         man \
         mosh \
         netmask \
