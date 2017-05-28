@@ -1,5 +1,9 @@
 # ubuntu
+<<<<<<< HEAD
+Expand base ubuntu 16.04 image with tools that I usually need.
+=======
 Expand base ubuntu images with tools that I usually need.
+>>>>>>> master
   * bsdmainutils
   * command-not-found
   * curl
