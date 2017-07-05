@@ -3,6 +3,7 @@ Expand base ubuntu image with tools that I usually need.
   * bsdmainutils
   * command-not-found
   * curl
+  * git
   * htop
   * jq
   * less

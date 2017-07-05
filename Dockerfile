@@ -13,6 +13,7 @@ RUN apt-get dist-upgrade -fy && \
         bsdmainutils \
         command-not-found \
         curl \
+        git \
         htop \
         jq \
         less \
