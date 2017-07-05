@@ -11,6 +11,7 @@ Expand base ubuntu 16.04 image with tools that I usually need.
   * mosh
   * netmask
   * openssh-client
+  * patch
   * python-pip
   * socat
   * vim-nox

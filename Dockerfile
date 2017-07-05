@@ -21,6 +21,7 @@ RUN apt-get dist-upgrade -fy && \
         mosh \
         netmask \
         openssh-client \
+        patch \
         python-pip \
         socat \
         vim-nox \
