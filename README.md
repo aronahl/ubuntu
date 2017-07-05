@@ -3,6 +3,7 @@ Expand base ubuntu 16.04 image with tools that I usually need.
   * bsdmainutils
   * command-not-found
   * curl
+  * git
   * htop
   * jq
   * less
