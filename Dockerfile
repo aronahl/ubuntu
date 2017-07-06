@@ -35,4 +35,7 @@ RUN apt-get dist-upgrade -fy && \
         apt-get autoremove -y && \
         rm -rf /var/lib/apt/lists/*
 ADD .vimrc /root/
+ADD .vim /root/.vim
+WORKDIR /root/
+RUN echo | vim -c :PlugInstall -c :q! -c :q!
 CMD bash
