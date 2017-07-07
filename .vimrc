@@ -10,29 +10,50 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 set nocompatible
 filetype plugin on
 set modeline
+set background=dark
+
+
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
-call plug#end()
-colo gruvbox
-set background=dark
-set guifont=Source\ Code\ Pro\ for\ Powerline
 
+call plug#end()
+
+"start gruvbox"
+let g:gruvbox_contrast_dark = "hard"
+colo gruvbox
+
+"Start nerdtree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+"Start airline
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
-let g:airline_symbols.crypt = '🔒'
-let g:airline_symbols.maxlinenr = '☰'
+
+let g:airline_left_sep = '»'
+let g:airline_right_sep = '«'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.spell = 'Ꞩ'
 let g:airline_symbols.notexists = '∄'
 let g:airline_symbols.whitespace = 'Ξ'
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
+
+if $TERM_PROGRAM == "iTerm.app"
+    let g:airline_symbols.crypt = '🔒'
+    let g:airline_symbols.maxlinenr = '☰'
+    let g:airline_symbols.paste = 'Þ'
+    let g:airline_symbols.spell = 'Ꞩ'
+    let g:airline_symbols.notexists = '∄'
+    let g:airline_symbols.whitespace = 'Ξ'
+    let g:airline_left_sep = ''
+    let g:airline_left_alt_sep = ''
+    let g:airline_right_sep = ''
+    let g:airline_right_alt_sep = ''
+    let g:airline_symbols.branch = ''
+    let g:airline_symbols.readonly = ''
+endif
