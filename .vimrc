@@ -19,7 +19,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'blindFS/vim-regionsyntax'
-
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 "start gruvbox"
