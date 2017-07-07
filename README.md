@@ -14,7 +14,7 @@ Expand base ubuntu 16.04 image with tools that I usually need.
   * patch
   * python-pip
   * socat
-  * vim-nox (with gruvbox theme)
+  * vim-nox (with gruvbox theme and airline)
   * w3m
 
 ## usage
