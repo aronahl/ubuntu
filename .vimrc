@@ -1,4 +1,5 @@
 set encoding=utf-8
+set autochdir
 set number
 set autoindent
 set tabstop=4
@@ -13,6 +14,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdtree'
 call plug#end()
 colo gruvbox
 set background=dark
