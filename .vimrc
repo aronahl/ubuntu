@@ -18,6 +18,7 @@ Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
+Plug 'blindFS/vim-regionsyntax'
 
 call plug#end()
 
