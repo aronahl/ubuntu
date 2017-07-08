@@ -1,5 +1,6 @@
 # ubuntu
 Expand base ubuntu 14.04 image with tools that I usually need.
+
   * bsdmainutils
   * command-not-found
   * curl
@@ -14,7 +15,7 @@ Expand base ubuntu 14.04 image with tools that I usually need.
   * patch
   * python-pip
   * socat
-  * vim-nox (with gruvbox theme, airline, and nerdtree)
+  * vim-nox with goodies from [vimarsee](https://github.com/aronahl/vimaresee.git)
   * w3m
 
 ## usage
