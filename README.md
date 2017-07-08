@@ -15,16 +15,7 @@ Expand base ubuntu image with tools that I usually need.
   * patch
   * python-pip
   * socat
-  * vim-nox
-    * gruvbox
-    * nerdtree
-    * typescript-vim
-    * vim-airline
-    * vim-airline-themes
-    * vim-bufferline
-    * vim-fugitive
-    * vim-regionsyntax
-    * vim-signify
+  * vim-nox with goodies from [vimarsee](https://github.com/aronahl/vimaresee.git)
   * w3m
 
 ## usage
