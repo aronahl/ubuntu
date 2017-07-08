@@ -34,8 +34,9 @@ RUN apt-get dist-upgrade -fy && \
         apt-get clean -y && \
         apt-get autoremove -y && \
         rm -rf /var/lib/apt/lists/*
-ADD .vimrc /root/
-ADD .vim /root/.vim
+RUN git clone --depth 1 https://github.com/aronahl/vimaresee.git /tmp/root && \
+    mv /tmp/root/.vim /tmp/root/.vimrc /root/ && \
+    rm -fr /tmp/root
 WORKDIR /root/
 RUN echo | vim -c :PlugInstall -c :q! -c :q!
 CMD bash
