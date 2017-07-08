@@ -22,6 +22,7 @@ Plug 'blindFS/vim-regionsyntax'
 Plug 'leafgarland/typescript-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
+Plug 'bling/vim-bufferline'
 call plug#end()
 
 "start gruvbox"

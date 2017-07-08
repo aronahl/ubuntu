@@ -21,6 +21,7 @@ Expand base ubuntu image with tools that I usually need.
     * typescript-vim
     * vim-airline
     * vim-airline-themes
+    * vim-bufferline
     * vim-fugitive
     * vim-regionsyntax
     * vim-signify
