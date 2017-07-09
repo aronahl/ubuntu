@@ -26,7 +26,8 @@ RUN apt-get dist-upgrade -fy && \
         socat \
         tidy \
         vim-nox \
-        w3m && \
+        w3m \
+        libxml2-utils && \
     pip install --upgrade pip && \
     pip install setuptools && \
     pip install pylint && \
