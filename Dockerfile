@@ -24,6 +24,7 @@ RUN apt-get dist-upgrade -fy && \
         patch \
         python-pip \
         socat \
+        tidy \
         vim-nox \
         w3m && \
     pip install --upgrade pip && \
@@ -32,7 +33,7 @@ RUN apt-get dist-upgrade -fy && \
     pip install awscli && \
     curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
     apt-get install -y nodejs && \
-    npm install -g typescript tslint && \
+    npm install -g typescript tslint jslint csslint && \
     apt-get remove -y python-pip && \
     apt-get autoclean -y && \
     apt-get clean -y && \
