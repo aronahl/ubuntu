@@ -1,0 +1,24 @@
+#!/usr/local/bin/python3
+"invoke vim via docker"
+
+import os
+import os.path
+import sys
+import subprocess
+
+if __name__ == "__main__":
+    locations = []
+    filepaths = []
+    for arg in sys.argv[1:]:
+        path = os.path.abspath(arg)
+        dirname = os.path.dirname(path)
+        filepaths.append(path)
+        locations.append(dirname)
+    subargs = "docker run --rm -it -e TERM -e TERM_PROGRAM -e TZ=America/Indianapolis".split()
+    for location in locations:
+        subargs.extend(["-v", ":".join((location, location))])
+    subargs.extend(["aronahl/ubuntu:npm","vim"])
+    for filepath in filepaths:
+        subargs.append(filepath)
+    print(" ".join(subargs))
+    sys.exit(subprocess.Popen(subargs).wait())
