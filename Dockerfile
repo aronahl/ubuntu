@@ -20,7 +20,6 @@ RUN apt-get dist-upgrade -fy && \
         man \
         mosh \
         netmask \
-        npm \
         openssh-client \
         patch \
         python-pip \
@@ -29,14 +28,17 @@ RUN apt-get dist-upgrade -fy && \
         w3m && \
     pip install --upgrade pip && \
     pip install setuptools && \
+    pip install pylint && \
     pip install awscli && \
-        apt-get remove -y python-pip && \
-        apt-get autoclean -y && \
-        apt-get clean -y && \
-        apt-get autoremove -y && \
-        rm -rf /var/lib/apt/lists/*
-RUN npm install -g typescript tslint
-RUN git clone --depth 1 https://github.com/aronahl/vimaresee.git /tmp/root && \
+    curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
+    apt-get install -y nodejs && \
+    npm install -g typescript tslint && \
+    apt-get remove -y python-pip && \
+    apt-get autoclean -y && \
+    apt-get clean -y && \
+    apt-get autoremove -y && \
+    rm -rf /var/lib/apt/lists/* && \
+    git clone --depth 1 https://github.com/aronahl/vimaresee.git /tmp/root && \
     mv /tmp/root/.vim /tmp/root/.vimrc /root/ && \
     rm -fr /tmp/root
 WORKDIR /root/
